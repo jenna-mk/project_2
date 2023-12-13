@@ -5,6 +5,7 @@ This project involves building an ETL pipeline using Python, Pandas, and Python 
 To create the category and subcategory dataframes, the crowdfunding.xlsx file (found in Starter_Files/Resources) was imported, and then modified so the category & subcategory column was split into two separate columns. Each column was extracted to a new dataframe with the following columns:
 * category_id / subcategory_id
 * category / subcategory
+
 The generated id starts at 1 and goes up to _n_, where _n_ is the total number of unique categories or subcategories. These dataframes were exported as csv files and can be found in Starter_Files/Resources/category.csv and subcategory.csv.
 
 ## Campaign DataFrame 
@@ -23,6 +24,7 @@ To create the campaign dataframe, the crowdfunding.xlsx file was again imported 
 * deadline
 * category_id
 * subcategory_id
+
 The launched_at column was renamed launch_date, and the data converted from UTC times to datetime format. The deadline column  was renamed end_date, and the data converted from UTC times to datetime format. Both the category_id and subcategory_id columns contained unique identification numbers referring back to those in the category and subcategory dataframes. This dataframe was exported as a csv file and can be found in Starter_Files/Resources/campaign.csv.
 
  ## Contacts DataFrame
@@ -30,6 +32,7 @@ The launched_at column was renamed launch_date, and the data converted from UTC 
  * contact_id
  * name
  * email
+
 The contact_id column was converted into the integer type. The name column was split into the first and last name, with each value placed into the new columns first_name and last_name. The dataframe was cleaned and exported as a csv file, which can be found in Starter_Files/Resources/contacts.csv.
 
 ## Crowdfunding Database
